@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%; /* Ensure the body takes up full height */
+    display: flex;
+    flex-direction: column; /* Allow flexbox layout */
+  }
+  
+  body {
+    font-family: 'Cinzel', serif; /* Apply Cinzel font */
+    color: #eaeaea;
+    background: 
+      url('rangerfull.webp') center center no-repeat, /* Top overlay image */
+      url('rangerbackground.webp') center center fixed; /* Bottom base background */
+    background-color: #121212; /* Fallback color */
+    background-size: contain, cover; /* Ensure both images fill the viewport */
+    line-height: 1.6;
+  }
+  
+  
+  /* Main Content Container */
+  main {
+    flex: 1; /* Push footer to the bottom if content is short */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.9); /* Semi-transparent header background */
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+    color: #fbb034;
+    font-family: 'Cinzel', serif;
+  }
+  
+  /* Navigation */
+  .nav-bar ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-bar ul li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-bar ul li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-bar ul li a:hover {
+    color: #fbb034;
+  }
+  
+  /* Introduction Section */
+  .introduction {
+    background-color: rgba(26, 26, 26, 0.8); /* Transparent dark background for readability */
+    padding: 2rem;
+    margin: auto; /* Center content */
+    max-width: 800px; /* Constrain width */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    text-align: center;
+  }
+  
+  .introduction h3 {
+    font-size: 2.5rem;
+    color: #fbb034; /* Gold color */
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1.5rem;
+  }
+  
+  .introduction p {
+    font-size: 1.2rem;
+    color: #eaeaea;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px; /* Constrain paragraph width */
+    text-align: justify; /* Align text neatly */
+  }
+  
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(31, 31, 31, 0.9); /* Semi-transparent footer background */
+    color: #888;
+    margin-top: auto; /* Ensure the footer is at the bottom */
+  }
+  
