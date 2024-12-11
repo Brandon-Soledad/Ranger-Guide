@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Public Sans', sans-serif;
+  background-color: #121212;
+  background-image: 
+    url('rangerbackground.webp'), 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+  background-size: cover;
+  background-position: center;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  background-color: rgba(31, 31, 31, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #fbb034;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-left: 1.5rem;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #eaeaea;
+  font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+  color: #fbb034;
+}
+
+/* Main Content Container */
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Section Styling */
+section {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(26, 26, 26, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.section-container {
+  text-align: left;
+}
+
+.section-container h3 {
+  font-size: 2rem;
+  color: #fbb034;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #fbb034;
+  padding-bottom: 0.5rem;
+}
+
+.section-container p {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.subsection {
+  margin-top: 1.5rem; /* Add spacing between subsections */
+}
+
+.subsection h4 {
+  font-size: 1.8rem; /* Slightly smaller than main section headings */
+  color: #fbb034; /* Same color as main section titles */
+  margin-bottom: 1rem; /* Space between title and content */
+}
+
+.subsection p {
+  font-size: 1rem; /* Slightly smaller text size */
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+.subsection + .subsection {
+  border-top: 2px solid #fbb034; /* Add a line separator in the same color as the section titles */
+  padding-top: 1.5rem; /* Add spacing above the content of the next subsection */
+}
+
+.subsection-image {
+  width: 350px;
+  height: 300px;
+  margin-right: 10px;
+}
+/* Footer */
+.site-footer {
+  background-color: rgba(31, 31, 31, 0.9);
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
