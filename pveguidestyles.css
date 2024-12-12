@@ -112,31 +112,75 @@ section {
 }
 
 .subsection {
-  margin-top: 1.5rem; /* Add spacing between subsections */
+  margin-top: 1.5rem;
 }
 
 .subsection h4 {
-  font-size: 1.8rem; /* Slightly smaller than main section headings */
-  color: #fbb034; /* Same color as main section titles */
-  margin-bottom: 1rem; /* Space between title and content */
+  font-size: 1.8rem;
+  color: #fbb034;
+  margin-bottom: 1rem;
+}
+
+.subsection h5 {
+  font-size: 1.4rem;
+  color: #fbb034;
+  margin-bottom: 1rem;
 }
 
 .subsection p {
-  font-size: 1rem; /* Slightly smaller text size */
+  font-size: 1rem;
   color: #eaeaea;
   line-height: 1.6;
 }
 
 .subsection + .subsection {
-  border-top: 2px solid #fbb034; /* Add a line separator in the same color as the section titles */
-  padding-top: 1.5rem; /* Add spacing above the content of the next subsection */
+  border-top: 2px solid #fbb034;
+  padding-top: 1.5rem;
 }
 
-.subsection-image {
-  width: 350px;
-  height: 300px;
+.subsection-image,
+.subsection-image-two {
+  width: 300px;
+  height: 200px;
   margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.subsection-image-three {
+  width: 300px;
+  height: 70px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.subsection-weapon-image {
+  width: 300px;
+  height: 400px;
+  align-items: right;
+}
+
+/* Image Expansion Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay img.expanded {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
 /* Footer */
 .site-footer {
   background-color: rgba(31, 31, 31, 0.9);
@@ -146,3 +190,40 @@ section {
   font-size: 0.9rem;
   margin-top: auto;
 }
+
+.weapon-row {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Add space between items */
+}
+
+.weapon-item {
+  display: flex;
+  flex-direction: column; /* Stack header and image vertically */
+  align-items: center; /* Center them horizontally */
+  text-align: center; /* Align text inside the item */
+}
+
+ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #eaeaea;
+}
+
+ul ul {
+  margin-left: 20px;
+  list-style-type: circle; /* Sub-bullet points as circles */
+}
+
+li strong {
+  color: #fbb034; /* Same color as h3 */
+  font-weight: bold; /* Ensure the strong tag is bold */
+}
+
+ul ul li strong {
+  color: #fbb034; /* Same color as h3 */
+  font-weight: bold; /* Make the titles bold */
+}
+
+

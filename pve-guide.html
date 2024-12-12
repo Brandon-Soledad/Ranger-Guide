@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class Guides</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="pveguidestyles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="logo">
@@ -31,7 +34,8 @@
       <div class="section-container">
         <h3>Introduction</h3>
         <p>
-          This guide isn't a wiki. I won't be explaining each individual ability but rather how the abilities complement one another and how they are beneficial in a PVE scenario. If you want an explanation for each ability the AoC wiki is the place to go.
+          This guide isn't a wiki. I won't be explaining each individual Ranger ability since individually each ability is rather simple. This will be more of a focus on
+          the possible ability combinations and an explanation of the more vague abilities like weapon combo's and finishers which are beneficial to a PVE scenario.
         </p>
       </div>
     </section>
@@ -40,16 +44,69 @@
       <div class="section-container">
         <h3>Combat Strategies</h3>
         <div class="subsection aoe">
-          <h4>AoE Pulls</h4>
+          <h4>Weapon Choices</h4>
           <p>
-            In this subsection, we discuss strategies and abilities that excel at dealing damage to multiple targets.
+            You have two options as a Ranger Longbow or Shortbow.
           </p>
-          <img src="vinefield.jpg" alt="vinefield" class="subsection-image" />
+          <div class="weapon-row">
+            <img src="longbow.jpg" alt="vinefield" class="subsection-weapon-image" />
+            <img src="shortbow.jpg" alt="shortbow" class="subsection-weapon-image" />
+          </div>
+          <p>
+            The weapon combo finishers are applied by a sequence of auto attacks and these finisher abilities vary based on the weapon you are using.
+          </p>
+          <div class="weapon-row">
+            <div class="weapon-item">
+              <h5>Longbow</h5>
+              <img src="longbowfinishers.jpg" alt="longbow-finishers" class="subsection-image" />
+              <img src="heartseeker.jpg" alt="longbow-finishers" class="subsection-image" />
+            </div>
+            <div class="weapon-item">
+              <h5>Shortbow</h5>
+              <img src="shortbowfinishers.jpg" alt="shortbow-finishers" class="subsection-image" />
+              <img src="arrowstorm.jpg" alt="longbow-finishers" class="subsection-image" />
+            </div>
+          </div>
+          <p>
+            These are the unique finishers that each bow provides.
+          </p>
+          <ul>
+            <li><strong>Longbow Finishers:</strong>
+                <ul>
+                    <li>
+                        <strong>Wound:</strong> Applies a debuff to decrease healing by 5%. This stacks 10 times for a maximum of 50% healing reduction.
+                    </li>
+                    <li>
+                        <strong>Stagger:</strong> Applies staggered to your target, which reduces their evasion by 25% for 6 seconds. Subsequent applications extend the duration up to 15 seconds.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Shortbow Finishers:</strong>
+                <ul>
+                    <li>
+                        <strong>Bleed:</strong> Applies a bleed that deals 15% of your physical power every second for 6 seconds.
+                    </li>
+                    <li>
+                        <strong>Snare:</strong> Applies a movement speed debuff that reduces movement speed by 25% per stack (Can trigger diminishing returns which makes the target immune for 10 seconds to CC).
+                    </li>
+                </ul>
+            </li>
+        </ul>
+          <p>
+            <h5>Longbow Pros and Cons</h5>
+            <p>
+              <h4>Pros</h4>
+              <ul>
+                
+              </ui>
+            </p>
+          </p>
         </div>
         <div class="subsection single-target">
           <h4>Single Target</h4>
           <p>
-            This subsection focuses on maximizing damage to a single target. These strategies and abilities are particularly effective in boss fights or against high-priority enemies.
+            This subsection focuses on maximizing damage to a single target. These strategies and abilities are
+            particularly effective in boss fights or against high-priority enemies.
           </p>
         </div>
       </div>
@@ -59,5 +116,39 @@
   <footer class="site-footer">
     <p>Rasmanit</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.subsection-image, .subsection-weapon-image').forEach(img => {
+      img.addEventListener('click', function () {
+        // Remove any existing overlays first
+        const existingOverlay = document.querySelector('.overlay');
+        if (existingOverlay) {
+          existingOverlay.remove();
+        }
+
+        // Create new overlay
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay', 'active');
+        document.body.appendChild(overlay);
+
+        // Create a new image element to ensure fresh display
+        const expandedImg = document.createElement('img');
+        expandedImg.src = this.src;
+        expandedImg.alt = this.alt;
+        expandedImg.classList.add('expanded');
+
+        // Replace the original image in the overlay
+        overlay.appendChild(expandedImg);
+
+        // Close functionality
+        const closeExpanded = () => {
+          overlay.remove();
+        };
+
+        overlay.addEventListener('click', closeExpanded);
+      });
+    });
+  </script>
 </body>
+
 </html>
