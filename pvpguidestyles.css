@@ -12,7 +12,7 @@
   }
   
   body {
-    font-family: 'Cinzel', serif; /* Apply Cinzel font */
+    font-family: 'Public Sans', sans-serif;
     color: #eaeaea;
     background: 
       url('rangerfull.webp') center center no-repeat, /* Top overlay image */
